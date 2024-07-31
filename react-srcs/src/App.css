@@ -23,4 +23,48 @@
         justify-content: space-between;
 
     }
+
+    /* CARDS */
+        /* "Completed x times! (text)" */
+    .cardOptions p {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--verde-claro);
+    }
+
+    .card h1 {
+        color: var(--btnComplete-color);
+    }
+
+    .hr {
+        color: var(--verde-claro);
+        background-color: var(--verde-claro);
+    }
+
+    /* btn Complete */
+    .btnComplete {
+        font-size: 0.9rem;
+        border: none;
+        color: var(--btnComplete-color);
+        background-color: var(--content-bg-color);
+        transition: 700ms;
+        padding: 0 10px 0 0;
+    }
+
+    /* Complete Function */
+    .cardOptions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+
+    .alinharBtns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px
+    }
+
 }
