@@ -3,37 +3,59 @@
 @media (min-width: 1024px) {
     .container {
         
-        max-width: 1000px;
-        margin: 15% auto;
-        padding: 5px;
+        max-width: 650px;
+        margin: auto;
+        box-shadow: 0px 4px 39px -19px;
+        border-radius: 25px 25px 0 0;
     }
     main {
-        max-width: 1000px;
+        max-width: 650px;
         background-color: var(--content-bg-color);
         padding: 2rem;
+        font-family: "Patua One Static";
     }
     header {
-        max-width: 1000px;
+        max-width: 650px;
         background-color: var(--verde-escuro);
         padding: 2rem;
         border-radius: 25px 25px 0 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        font-family: "Poppins";
 
+    }
+    nav {
+        margin-top: 0.5rem;
     }
 
     /* CARDS */
-        /* "Completed x times! (text)" */
-    .cardOptions p {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--verde-claro);
+    .post {
+        background-color: #fbfbfb;
+        margin-bottom: 2%;
+        padding: 2%;
+        border-radius: 25px;
+        width: 95%;
     }
+
+    .posts {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+        /*vvvvvvv "Completed x times! (text)" vvvvvvv*/
+        .cardOptions p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--verde-claro);
+        }
+        /*^^^^ "Completed x times! (text)" ^^^^*/ 
 
     .card h1 {
         color: var(--btnComplete-color);
+        margin-bottom: 1rem;
     }
 
     .hr {
@@ -46,9 +68,10 @@
         font-size: 0.9rem;
         border: none;
         color: var(--btnComplete-color);
-        background-color: var(--content-bg-color);
+        background-color: #fbfbfb;
         transition: 700ms;
-        padding: 0 10px 0 0;
+        padding: 0;
+        cursor: pointer;
     }
 
     /* Complete Function */
@@ -64,7 +87,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 10px
+        gap: 10px;
+        padding: 5px;
     }
 
 }

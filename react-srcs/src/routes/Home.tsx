@@ -44,16 +44,18 @@ const Home = () => {
         <div className="card">
             <h1>Start working on something!</h1>
             
-            {posts.length === 0 ? (<p>Carregando ...</p>) : (
-                posts.map((post: Posts) => (
-                    <div className="post" key={post.id}>
-                        <h2>{post.title}</h2>
-                        <p>{post.desc}</p>
-                        <Link to={`/todos/${post.id}`} className="btn">Ler mais</Link>
-                        <CompleteFunction />
-                    </div>
-                ))
-            )}
+            <div className="posts">
+                {posts.length === 0 ? (<p>Carregando ...</p>) : (
+                    posts.map((post: Posts) => (
+                        <div className="post" key={post.id}>
+                            <h2>{post.title}</h2>
+                            <p>{post.desc}</p>
+                            <Link to={`/todos/${post.id}`} className="btn">Ler mais</Link>
+                            <CompleteFunction />
+                        </div>
+                    ))
+                )}
+            </div>
                 
         </div>
     );
