@@ -2,7 +2,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CompleteFunction from "../components/Buttons/CompleteFunction";
-
+import FormTask from "../components/FormTask";
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
 
 
 const Home = () => {
@@ -39,10 +41,13 @@ const Home = () => {
     // array vazio -> useEffect só executa uma vez, no loading da pág
     // no loading da pag -> executa essa função para receber o JSON
     // ! FIM REQUISIÇÃO GET
+    // * REQUISIÇÃO POST
+
 
     return (
         <div className="card">
             <h1>Start working on something!</h1>
+            <FormTask getPosts={getPosts} />
             
             <div className="posts">
                 {posts.length === 0 ? (<p>Carregando ...</p>) : (
